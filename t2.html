@@ -8,9 +8,9 @@
     
     <label id="l" style="font-size: 200px">0</label><br><br><br>
 <span id="esp"><button id="b" style="color:red">Count</button></span>
-    <button id="h" style="color:yellow">Reset</button><br><br><br><br><br><br>
+   <span id="esp2"> <button id="h" style="color:yellow">Reset</button><br><br><br><br><br><br>
     <button id="o" style="color:lightgreen">Revert the count</button><br><br><br><span><a id="a">   </a><p id="p"></p><a id="b">  </a></span><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<span id="s1"></span>
+   </span><span id="s1"></span>
 <style>
     body{
         background-color:rgb(12, 12, 12);
@@ -76,6 +76,7 @@ img{
     let o= document.getElementById("o")
     let s1=document.getElementById("s1")
     let esp=document.getElementById("esp")
+    let esp2=document.getElementById("esp2")
     let count=0
     b.onclick = function(){
         count++
@@ -83,8 +84,8 @@ img{
     s1.innerHTML='<audio src="Allahu Akbar.mp3" autoplay>'
         if(count === 34){
             count = 34
-            s1.innerHTML=''
-            esp.innerHTML='<button id= "c" style="text-align:center"><a href="index.html" style="text-decoration: none; color: blue"> Alhamdulillah!! Your Tasbih is complete. Go to main sector</a><br><br><br><br><br><br><br><br></button><audio src="Allahu Akbar.mp3" autoplay>'
+            esp2.innerHTML=''
+            esp.innerHTML='<button id= "c" style="text-align:center"><a href="index.html" style="text-decoration: none; color: blue"> Alhamdulillah!! Your Tasbih is complete. Go to main sector</a></button>'
         }
 
         l.textContent= count
