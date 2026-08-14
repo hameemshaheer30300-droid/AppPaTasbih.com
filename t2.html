@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html><head><title>App Pa Tasbih</title></head>
+<body style="text-align:center;">
+    <img id="img1" src="Allah.png">
+    <img id="img2" src="Ar-Rahman.png">
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <h1 style="font-size:50px">Tasbih-E-Fatimi: Allahu Akbar</h1><hr>
+    
+    <label id="l" style="font-size: 200px">0</label><br><br><br>
+<span id="esp"><button id="b" style="color:red">Count</button></span>
+    <button id="h" style="color:yellow">Reset</button><br><br><br><br><br><br>
+    <button id="o" style="color:lightgreen">Revert the count</button><br><br><br><span><a id="a">   </a><p id="p"></p><a id="b">  </a></span><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<span id="s1"></span>
+<style>
+    body{
+        background-color:rgb(12, 12, 12);
+        color:cyan;
+        border: 2px double cyan;
+text-shadow: 0 0 20px;
+box-shadow: 0 0 20px
+    }
+    li{
+        text-align: left;
+        font-size: 25px;
+        font-weight: bold;
+        margin-left: 30px
+    }
+    
+    button{
+         background-color:rgb(12, 12, 12);
+        color:cyan;
+        font-size: 70px;
+        border-radius: 20px
+    }
+    button:hover{
+        box-shadow:10px 5px 20px;
+    }
+    #b{
+        margin-right: 30px
+    }
+    #b:hover{
+        box-shadow:10px 5px 20px red;
+    }
+    hr{
+        width: 750px;
+        border: solid 2.6px cyan;
+        
+    }
+    #p{
+        background-color: red;
+        color: white;
+        margin-left: 150px;
+        margin-right: 150px;
+        font-size: 80px; border-radius: 40px; 
+    }
+    #img1{
+        height:200px;
+        width:300px;
+        float:right
+    }
+    #img2{
+        height:200px;
+        width:300px;
+        float:left
+    }
+img{
+    margin-bottom: 15px
+}
+
+</style>
+</body>
+<script>
+    let l= document.getElementById("l")
+    let b= document.getElementById("b")
+    let h= document.getElementById("h")
+    let o= document.getElementById("o")
+    let s1=document.getElementById("s1")
+    let esp=document.getElementById("esp")
+    let count=0
+    b.onclick = function(){
+        count++
+        
+    s1.innerHTML='<audio src="Allahu Akbar.mp3" autoplay>'
+        if(count ==   34){
+            count = 34
+            s1.innerHTML=''
+            esp.innerHTML='<button id= "b"><a href="index.html" style="text-decoration: none; color: red">Al'hamdulillah!! Your Tasbih is complete. Go to main sector</a></button><audio src="Allahu Akbar.mp3" autoplay>'
+        }
+
+        l.textContent= count
+      
+    }
+    h.onclick = function(){
+        count= 0
+        l.textContent= count
+    }
+    o.onclick = function(){
+        count--
+        if (count < 0){
+count=0;
+p.textContent="You may'nt count under 0."
+        }
+        l.textContent= count
+    }
+    
+     
+
+</script>
+</html>
